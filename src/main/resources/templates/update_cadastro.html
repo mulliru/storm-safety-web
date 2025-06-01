@@ -15,21 +15,21 @@
   <hr>
   <h2>Atualizar Ocorrências</h2>
 
-  <form action="#" th:action="@{/saveCadastro}" th:object="${cadastro}"
-        method="POST">
+  <form action="#" th:action="@{/saveCadastro}" th:object="${cadastro}" method="POST">
 
     <input type="hidden" th:field="*{id}"/>
 
-    <input type="text" th:field="*{nome}" class="form-control mb-4 col-4">
+    <input type="text" th:field="*{nomeCompleto}" class="form-control mb-4 col-4" placeholder="Nome Completo">
 
-    <input type="text" th:field="*{sobrenome}" class="form-control mb-4 col-4">
+    <input type="text" th:field="*{ocorrencia}" class="form-control mb-4 col-4" placeholder="Ocorrência">
 
-    <input type="text" th:field="*{email}" class="form-control mb-4 col-4">
+    <input type="text" th:field="*{email}" class="form-control mb-4 col-4" placeholder="Email para contato">
 
-    <input type="text" th:field="*{senha}" class="form-control mb-4 col-4">
+    <input type="text" th:field="*{cep}" class="form-control mb-4 col-4" placeholder="CEP">
 
-    <button type="submit" class="btn btn-info col-2"> Atualizar Ocorrência</button>
+    <button type="submit" class="btn btn-info col-2">Atualizar Ocorrência</button>
   </form>
+
 
   <hr>
 

@@ -74,8 +74,8 @@
         </thead>
         <tbody>
         <tr th:each="cadastro : ${listCadastro}">
-            <td th:text="${cadastro.nome}"></td>
-            <td th:text="${cadastro.sobrenome}"></td>
+            <td th:text="${cadastro.nomeCompleto}"></td>
+            <td th:text="${cadastro.ocorrencia}"></td>
             <td th:text="${cadastro.email}"></td>
             <td>
                 <a th:href="@{/MostrarFormUpdate/{id}(id=${cadastro.id})}" class="btn btn-primary">Atualizar</a>

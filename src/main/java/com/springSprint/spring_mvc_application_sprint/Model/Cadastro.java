@@ -3,20 +3,26 @@ package com.springSprint.spring_mvc_application_sprint.Model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "CADASTRO")//ALTERAR QUANDO FOR CRIAR A TABELA NO ORACLE
+@Table(name = "cadastro") // Corrigido para minúsculo, como no banco da Azure
 public class Cadastro {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "nome", nullable = false)
-    private String nome;
-    @Column(name = "sobrenome", nullable = false)
-    private String sobrenome;
+    @Column(name = "nome_completo", nullable = false)
+    private String nomeCompleto;
+
+    @Column(name = "cep", nullable = false)
+    private String cep;
+
     @Column(name = "email", nullable = false)
     private String email;
-    @Column(name = "senha", nullable = false)
-    private String senha;
+
+    @Column(name = "ocorrencia", nullable = false)
+    private String ocorrencia;
+
+    // Getters e Setters
 
     public int getId() {
         return id;
@@ -26,20 +32,20 @@ public class Cadastro {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getNomeCompleto() {
+        return nomeCompleto;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNomeCompleto(String nomeCompleto) {
+        this.nomeCompleto = nomeCompleto;
     }
 
-    public String getSobrenome() {
-        return sobrenome;
+    public String getCep() {
+        return cep;
     }
 
-    public void setSobrenome(String sobrenome) {
-        this.sobrenome = sobrenome;
+    public void setCep(String cep) {
+        this.cep = cep;
     }
 
     public String getEmail() {
@@ -50,11 +56,11 @@ public class Cadastro {
         this.email = email;
     }
 
-    public String getSenha() {
-        return senha;
+    public String getOcorrencia() {
+        return ocorrencia;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setOcorrencia(String ocorrencia) {
+        this.ocorrencia = ocorrencia;
     }
 }

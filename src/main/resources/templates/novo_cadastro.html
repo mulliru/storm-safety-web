@@ -14,22 +14,23 @@
     <hr>
     <h2>Salvar Ocorrências</h2>
 
-    <form action="#" th:action="@{/saveCadastro}" th:object="${cadastro}"
-          method="POST">
-        <input type="text" th:field="*{nome}"
-               placeholder="Nome Completo" class="form-control mb-4 col-4">
+       <form action="#" th:action="@{/saveCadastro}" th:object="${cadastro}" method="POST">
 
-        <input type="text" th:field="*{sobrenome}"
-               placeholder="Ocorrência" class="form-control mb-4 col-4">
+       <input type="text" th:field="*{nomeCompleto}"
+              placeholder="Nome Completo" class="form-control mb-4 col-4">
 
-        <input type="text" th:field="*{email}"
-               placeholder="Email para contato" class="form-control mb-4 col-4">
+       <input type="text" th:field="*{ocorrencia}"
+              placeholder="Ocorrência" class="form-control mb-4 col-4">
 
-        <input type="text" th:field="*{senha}"
-               placeholder="CEP" class="form-control mb-4 col-4">
+       <input type="text" th:field="*{email}"
+              placeholder="Email para contato" class="form-control mb-4 col-4">
 
-        <button type="submit" class="btn btn-info col-2"> Salvar Ocorrência</button>
-    </form>
+       <input type="text" th:field="*{cep}"
+              placeholder="CEP" class="form-control mb-4 col-4">
+
+       <button type="submit" class="btn btn-info col-2">Salvar Ocorrência</button>
+       </form>
+
 
     <hr>
 
